@@ -1,17 +1,10 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Fri Jul 26 19:36:48 2019
-
-@author: Z
-"""
-
-import datetime
+from datetime import datetime
 from kivy.app import App
 from kivy.uix.boxlayout import BoxLayout
 from kivy.uix.label import Label
 
-aa = datetime.datetime(2015,3,27,4,55,00)
-bb = datetime.datetime.now()
+aa = datetime(2015,3,27,4,55,00)
+bb = datetime.now()
 cc = bb - aa
 dd = str(cc)
 days_ = int(dd.split()[0])
@@ -32,6 +25,7 @@ dDays2 = {11:'дней',12:'дней',13:'дней',14:'дней'}
 dHours2 = {11:'часов',12:'часов',13:'часов',14:'часов'}
 dMins2 = {11:'минут',12:'минут',13:'минут',14:'минут'}
 dSecs2 = {11:'секунд',12:'секунд',13:'секунд',14:'секунд'}
+
 def Text(time, dic, dic2):    
     if time < 10:
         text = str(time) + " " + str(dic[int(str(time)[-1])])
